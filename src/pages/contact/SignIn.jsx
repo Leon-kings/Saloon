@@ -83,7 +83,7 @@ export default function SignIn() {
                   onChange={formik.handleChange}
                   error={formik.touched.name && Boolean(formik.errors.name)}
                   helperText={formik.touched.name && formik.errors.name}
-                  className="bg-gray-700 rounded-lg"
+                  className="bg-white p-4 rounded-lg"
                   InputProps={{
                     className: "text-white"
                   }}
@@ -103,7 +103,7 @@ export default function SignIn() {
                   onChange={formik.handleChange}
                   error={formik.touched.email && Boolean(formik.errors.email)}
                   helperText={formik.touched.email && formik.errors.email}
-                  className="bg-gray-700 rounded-lg"
+                  className="bg-white p-4 rounded-lg"
                   InputProps={{
                     className: "text-white"
                   }}
@@ -124,7 +124,7 @@ export default function SignIn() {
                   onChange={formik.handleChange}
                   error={formik.touched.message && Boolean(formik.errors.message)}
                   helperText={formik.touched.message && formik.errors.message}
-                  className="bg-gray-700 rounded-lg"
+                  className="bg-white p-4 rounded-lg"
                   InputProps={{
                     className: "text-white"
                   }}

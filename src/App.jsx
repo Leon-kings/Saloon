@@ -15,6 +15,7 @@ import Brands from "./components/brands/Brands";
 import Footer from "./components/footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/index/Home";
+import SignIn from "./pages/contact/SignIn";
 
 export default function App() {
   return (
@@ -28,7 +29,9 @@ export default function App() {
             <Route element={<AboutUs />} path="/A-673" />
             <Route element={<Services />} path="/S-849" />
             <Route element={<Home />} path="/" />
-            <Route element={<ServicesCategory />} path="/C-926" />{" "}
+            <Route element={<ServicesCategory />} path="/C-926" />
+            <Route element={<SignIn />} path="/S-906" />
+            {" "}
           </Routes>
           <Footer />
         </BrowserRouter>
