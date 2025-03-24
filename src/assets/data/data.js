@@ -8,7 +8,6 @@ import gallery1 from '../images/others/gallery-img2.jpg'
 import gallery2 from '../images/others/gallery-img5.jpg'
 import gallery3 from '../images/others/image.jpg'
 import image1 from '../images/others/merlin_172609284_add9b0f1-cd00-4ddb-b1ea-fac02366500a-articleLarge.webp'
-import gallery4 from '../images/others/istockphoto-836160414-612x612.jpg'
 import gallery5 from '../images/others/istockphoto-640274128-612x612.jpg'
 export const logo = [
   {
@@ -159,17 +158,16 @@ export const galleryImages = [
   {
     id: 2,
     src: gallery,
-    col: 4,
+    col: 4, mobile: true,
     position: "absolute",
     top: 0,
     left: 0,
     zIndex: 2,
   },
-  { id: 3, src: gallery2, col: 4 },
-  { id: 4, src: gallery1, col: 4 },
+  { id: 3, src: gallery2, col: 4, mobile: true },
+  { id: 4, src: gallery1, col: 4, mobile: true },
   { id: 5, src: gallery3, col: 4 },
-  { id: 6, src: gallery4, col: 4 },
-  { id: 7, src: gallery5, col: 4, offset: true },
+  { id: 6, src: gallery5, col: 4,},
 ];
 export const brands = [
   { id: 1, image: 'https://hairsaloon.com/wp-content/uploads/2022/10/Forming_Cream_100g-1024x1024.jpg' },

@@ -13,23 +13,31 @@ import WorkingHrs from "./components/hrs/WorkingHrs";
 import Gallery from "./components/gallery/Gallery";
 import Brands from "./components/brands/Brands";
 import Footer from "./components/footer/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/index/Home";
 
 export default function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <AboutUs />
-      <Discount />
-      <Counter />
-      <Services />
-      <ServicesCategory />
-      <Price/>
-      <Testimony/>
-      <WorkingHrs/>
-      <Gallery/>
-      <Brands/>
-      <Footer/>
+      <div className="w-full">
+        <BrowserRouter>
+          {" "}
+          <Navbar />
+          <Routes>
+            {" "}
+            <Route element={<AboutUs />} path="/A-673" />
+            <Route element={<Services />} path="/S-849" />
+            <Route element={<Home />} path="/" />
+            {/* 
+            
+            
+            <WorkingHrs />
+            
+             */}
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>{" "}
     </>
   );
 }

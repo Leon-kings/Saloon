@@ -28,7 +28,7 @@ export const AboutUs = () => {
                   practical, cultural, and popular considerations also influence
                   some hairstyles.
                 </p>
-                <p className="text-red-800 font-medium p-4">Roman Empire and Middle Ages</p>
+                <p className="text-red-400 font-medium p-4">Roman Empire and Middle Ages</p>
                 <p>
                   Between 27 BC and 102 AD, in Imperial Rome, women wore their
                   hair in complicated styles: a mass of curls on top, or in rows

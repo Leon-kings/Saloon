@@ -1,232 +1,213 @@
-import React from 'react';
-import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Box, Container, Button, Typography, useTheme, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
+import CloseIcon from '@mui/icons-material/Close';
+import logo from '../../assets/images/logo/images.png'
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto',
-  },
-}));
+  const navItems = [
+    { name: 'Home', path: '/#' },
+    { name: 'Payment', path: '/#' },
+    { name: 'About', path: '/#' },
+    { name: 'Blog', path: '/#' },
+  ];
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
+  const mobileMenuVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.3, ease: "easeOut" }
     },
-  },
-}));
-
-export default function Navbar() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
-  const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
+    exit: { opacity: 0, y: -20 }
   };
-
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
-
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
-
-  const menuId = 'primary-search-account-menu';
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
-
-  const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
 
   return (
-    <Box sx={{ flexGrow: 1 }} className='rounded-2xl'>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon onClick={handleProfileMenuOpen} />
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
+    <Box className='w-full'
+      component="header" 
+      sx={{
+        width: '100%',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        zIndex: 1100,
+        backgroundColor: 'background.paper',
+        boxShadow: 1,
+        py: 1
+      }}
+    >
+      <Container maxWidth="lg">
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          width: '100%'
+        }}>
+          {/* Logo */}
+          <Box sx={{ width: 260 }}>
+            <a href="/#">
+              <Box 
+                component="img"
+                src={logo}
+                alt=""
+                sx={{
+                  height: 60,
+                  display: theme.palette.mode === 'light' ? 'block' : 'none'
+                }}
+              />
+              <Box 
+                component="img"
+                src={logo}
+                alt=""
+                sx={{
+                  height: 50,
+                  display: theme.palette.mode === 'dark' ? 'block' : 'none'
+                }}
+              />
+            </a>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
+
+          {/* Desktop Navigation */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
+            <Box component="nav">
+              <Box component="ul" sx={{ display: 'flex', gap: 4 }}>
+                {navItems.map((item) => (
+                  <ListItem key={item.name} NavLink={item.path}>
+                    {item.name}
+                  </ListItem>
+                ))}
+              </Box>
+            </Box>
+
+            <Box sx={{ display: 'flex', gap: 2, ml: 4 }}>
+              <Button 
+                href="/#" 
+                variant="text"
+                sx={{ 
+                  color: 'text.primary',
+                  '&:hover': { color: 'primary.main' }
+                }}
+              >
+                Sign In
+              </Button>
+              <Button 
+                href="/#" 
+                variant="contained"
+                sx={{ 
+                  backgroundColor: 'primary.main',
+                  '&:hover': { backgroundColor: 'primary.dark' }
+                }}
+              >
+                Sign Up
+              </Button>
+            </Box>
           </Box>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+
+          {/* Mobile Menu Button */}
+          <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            <Button 
+              onClick={() => setOpen(!open)}
+              sx={{ 
+                minWidth: 'auto',
+                p: 1,
+                color: 'text.primary'
+              }}
+            >
+              {open ? <CloseIcon /> : <MenuIcon />}
+            </Button>
+          </Box>
+        </Box>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {open && isMobile && (
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={mobileMenuVariants}
+              style={{
+                position: 'absolute',
+                top: '100%',
+                left: 0,
+                right: 0,
+                backgroundColor: theme.palette.background.paper,
+                boxShadow: theme.shadows[3],
+                borderRadius: theme.shape.borderRadius,
+                overflow: 'hidden',
+                zIndex: 1200
+              }}
+            >
+              <Box component="nav" sx={{ p: 2 }}>
+                <Box component="ul" sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                  {navItems.map((item) => (
+                    <ListItem key={item.name} NavLink={item.path} mobile>
+                      {item.name}
+                    </ListItem>
+                  ))}
+                </Box>
+
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mt: 2 }}>
+                  <Button 
+                    href="/#" 
+                    variant="text"
+                    fullWidth
+                    sx={{ 
+                      color: 'text.primary',
+                      '&:hover': { color: 'primary.main' }
+                    }}
+                  >
+                    Sign In
+                  </Button>
+                  <Button 
+                    href="/#" 
+                    variant="contained"
+                    fullWidth
+                    sx={{ 
+                      backgroundColor: 'primary.main',
+                      '&:hover': { backgroundColor: 'primary.dark' }
+                    }}
+                  >
+                    Sign Up
+                  </Button>
+                </Box>
+              </Box>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Container>
     </Box>
   );
-}
+};
+
+const ListItem = ({ children, NavLink, mobile = false }) => {
+  return (
+    <Box component="li" sx={{ listStyle: 'none' }}>
+      <Button
+        href={NavLink}
+        fullWidth={mobile}
+        sx={{
+          justifyContent: mobile ? 'flex-start' : 'center',
+          px: mobile ? 2 : 0,
+          py: 1,
+          color: 'text.secondary',
+          '&:hover': {
+            color: 'primary.main',
+            backgroundColor: 'transparent'
+          }
+        }}
+      >
+        <Typography variant="body1" component="span">
+          {children}
+        </Typography>
+      </Button>
+    </Box>
+  );
+};
+
+export default Navbar;
