@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+#main-banner{
+  background-image: url('/src/assets/images/others/gallery-img2.jpg');
+  width: 100%;
+  background-size: cover;
+}
+
+.about-image{
+  background-image: url('/src/assets/images/others/gallery-img2.jpg');
+  background-size: cover;
+}
+#discount{
+  background-image: url('/src/assets/images/others/gallery-img2.jpg');
+  background-size: cover;
+}
+#service-provide{
+  background-image: url('/src/assets/images/others/aw-creative-HEde-a_T4E8-unsplash.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  border-radius: 12px;
+ 
+}
+.price-img{
+  background-image: url('/src/assets/images/others/331e5e288b3a9c0c2a37f41218fac388.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
