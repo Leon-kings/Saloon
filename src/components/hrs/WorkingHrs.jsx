@@ -69,7 +69,7 @@ export default function WorkingHrs() {
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8">
               {/* Left Column: Working Hours */}
               <motion.div
-                className="col-lg- order-2 lg:order-1"
+                className="px-4 order-2 lg:order-1"
                 initial={{ opacity: 0, x: 0 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
