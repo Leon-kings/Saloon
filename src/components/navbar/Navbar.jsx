@@ -5,15 +5,17 @@ import { Box, Container, Button, Typography, useTheme, useMediaQuery } from '@mu
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import logo from '../../assets/images/logo/images.png'
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const navItems = [
-    { name: 'Home', path: '/#' },
-    { name: 'Payment', path: '/#' },
-    { name: 'About', path: '/#' },
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/S-849' },
+    { name: 'About', path: '/A-673' },
     { name: 'Blog', path: '/#' },
   ];
 
@@ -28,7 +30,9 @@ const Navbar = () => {
   };
 
   return (
-    <Box className='w-full'
+    <>
+    <div className="w-full mb-16">
+    <Box className='w-full '
       component="header" 
       sx={{
         width: '100%',
@@ -50,7 +54,7 @@ const Navbar = () => {
         }}>
           {/* Logo */}
           <Box sx={{ width: 260 }}>
-            <a href="/#">
+           <Link to={'/'}>
               <Box 
                 component="img"
                 src={logo}
@@ -69,7 +73,7 @@ const Navbar = () => {
                   display: theme.palette.mode === 'dark' ? 'block' : 'none'
                 }}
               />
-            </a>
+            </Link>
           </Box>
 
           {/* Desktop Navigation */}
@@ -182,6 +186,8 @@ const Navbar = () => {
         </AnimatePresence>
       </Container>
     </Box>
+    </div>
+    </>
   );
 };
 

@@ -7,10 +7,7 @@ import { Card, CardContent, Typography, Box } from "@mui/material";
 export default function ServicesCategory() {
   return (
     <>
-      <section
-        className="w-full mt-10 bg-gray-800 py-16"
-        id="service-provide"
-      >
+      <section className="w-full mt-10 bg-gray-800 py-16" id="service-provide">
         <div className="container mx-auto px-4">
           <div className="row flex flex-col lg:flex-row gap-8">
             {service.map((service, index) => (
@@ -24,11 +21,9 @@ export default function ServicesCategory() {
                 <Card className="h-full">
                   <CardContent className="text-center">
                     {/* Service Image */}
-                    <Box
-                      className="h-44 w-full object-cover rounded-2xl mx-auto bg-center"
-                      style={{ backgroundImage: `url(${service.image})` }}
-                    ></Box>
-
+                    <Box className=" w-full">
+                      <img src={service.image} className="p-4 rounded-xl h-64 w-full object-cover" alt="" />
+                    </Box>
                     {/* Service Title */}
                     <Typography
                       variant="h5"

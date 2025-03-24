@@ -34,7 +34,7 @@ function CounterCard({ label, icon, start, end }) {
   }, [count, end, start]);
 
   return (
-    <div className="items-center p-4 rounded-lg shadow-md">
+    <div className="items-center bg-gray-900 p-4 rounded-lg shadow-md">
       <IconButton className="text-white">{icon}</IconButton>
       <motion.div
         key={count}

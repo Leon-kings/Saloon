@@ -49,7 +49,7 @@ export default function Price() {
                       <img
                         src={service.image}
                         alt=""
-                        className="w-full object-cover mx-auto"
+                        className="w-full rounded-2xl h-40 object-cover mx-auto"
                       />
                       <h3 className="text-xl font-semibold mt-4">
                         {service.title}

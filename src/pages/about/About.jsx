@@ -51,7 +51,7 @@ export const AboutUs = () => {
             transition={{ duration: 1 }}
           >
             <div className="about-frame">
-              <div className="about-image h-96 bg-cover bg-center rounded-lg shadow-lg"></div>
+              <div className="about-image h-104 xl:h-94 bg-cover bg-center rounded-lg shadow-lg"></div>
             </div>
           </motion.div>
         </div>
