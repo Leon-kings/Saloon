@@ -1,4 +1,6 @@
-import { Description, HomeWork } from "@mui/icons-material";
+import testimony from '../images/others/smile-beauty-woman-brushing-her-hair-studio-cream-background-natural-luxury-style-haircare-face-shampoo-with-happy-young-indian-female-model-salon-hairdresser_590464-203449.avif'
+import testimony1 from '../images/others/team-1-640x640.jpg'
+import testimony2 from '../images/others/team-one.webp'
 import image from "../images/logo/61PoobFj7kL.jpg";
 import category from "../images/others/RogaineMensWomens.jpg";
 import gallery from '../images/others/gallery-img.jpg'
@@ -136,20 +138,20 @@ export const testimonials = [
   {
     id: 1,
     name: "Kevin Weaver",
-    text: "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Curabitur ullamcorper ultricies nisi eget dui.",
-    image: image,
+    text: "Daniela was very informative on the best way to care for my hair.",
+    image: testimony,
   },
   {
     id: 2,
     name: "Michelle Ortiz",
-    text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris aliquip. Commodo consequat. Duis aute irure dolor in reprehenderit. In voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Aenean commodo ligula eget dolor.",
-    image: image,
+    text: "I highly recommend this salon to anyone looking for a personalized and professional hair experience. I'll definitely be coming back!",
+    image: testimony1,
   },
   {
     id: 3,
     name: "John Doe",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: image,
+    text: "I am so glad I found Emilee at Salon Faith. She does an outstanding job on my hair. Each time is such a treat with the wonderful head massage. I always feel so pampered!",
+    image: testimony2,
   },
 ];
 export const galleryImages = [

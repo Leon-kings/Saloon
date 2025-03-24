@@ -6,7 +6,7 @@ import { price } from "../../assets/data/data";
 export default function Price() {
   return (
     <>
-      <section className="w-full py-16 mt-10 mb-8 text-white dark:text-white bg-gray-800" id="price">
+      <section className="w-full rounded-2xl py-16 mt-10 mb-8 text-white dark:text-white bg-gray-800" id="price">
         <div className="w-full px-4">
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-8">
             {/* Left Column: Price Image */}

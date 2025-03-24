@@ -17,7 +17,7 @@ export default function Testimony() {
 
   return (
     <>
-      <section className="w-full mt-10 mb-8 py-16 dark:text-white text-white bg-gray-800">
+      <section className="w-full rounded-2xl mt-10 mb-8 py-16 dark:text-white text-white bg-gray-800">
         <div className="w-full px-4">
           {/* Title Section */}
           <div className="text-center mb-12">

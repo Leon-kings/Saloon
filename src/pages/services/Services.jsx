@@ -22,7 +22,7 @@ export default function Services() {
   };
   return (
     <>
- <section className="w-full mt-8 mb-8 p-10 justify-center bg-gray-800 ">
+ <section className="w-full mt-8 rounded-2xl mb-8 p-10 justify-center bg-gray-800 ">
       <div className="w-full px-4">
         {/* Title Section */}
         <div className="text-center mb-12">

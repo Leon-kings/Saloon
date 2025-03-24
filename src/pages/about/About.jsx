@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 export const AboutUs = () => {
   return (
-    <section className="about-us py-16 bg-gray-800" id="about-us">
+    <section className="w-full rounded-2xl mb-6 py-16 bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
           {/* Left Column: About Content */}
@@ -15,13 +15,29 @@ export const AboutUs = () => {
             transition={{ duration: 1 }}
           >
             <div className="about-content">
-              <h2 className="h2-title text-4xl font-bold mb-4">About Us</h2>
-              <h3 className="h3-title text-2xl font-semibold mb-4">Our History</h3>
+
+              <h3 className="h3-title text-2xl font-semibold mb-4">
+                Our History
+              </h3>
               <div className="overflow-text">
                 <p className="text-white leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum quis sem sed pharetra. Morbi tempus lobortis nunc non commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi enim orci,
-                  commodo quis lacinia ac, scelerisque at dui. Aliquam at augue et nulla euismod aliquet ut a nisi. Phasellus a neque eleifend, lacinia felis ut, vestibulum mi. Aliquam interdum, velit non elementum pulvinar, metus neque lobortis eros, sed
-                  sodales magna justo quis lectus. Sed consequat leo.
+                  A hairstyle, hairdo, haircut, or coiffure refers to the
+                  styling of hair, usually on the human head but sometimes on
+                  the face or body. The fashioning of hair can be considered an
+                  aspect of personal grooming, fashion, and cosmetics, although
+                  practical, cultural, and popular considerations also influence
+                  some hairstyles.
+                </p>
+                <p className="text-red-800 font-medium p-4">Roman Empire and Middle Ages</p>
+                <p>
+                  Between 27 BC and 102 AD, in Imperial Rome, women wore their
+                  hair in complicated styles: a mass of curls on top, or in rows
+                  of waves, drawn back into ringlets or braids. Eventually noble
+                  women's hairstyles grew so complex that they required daily
+                  attention from several enslaved people and a stylist in order
+                  to be maintained. The hair was often lightened using wood ash,
+                  unslaked lime and sodium bicarbonate, or darkened with copper
+                  filings, oak-apples or leeches marinated in wine and vinegar.
                 </p>
               </div>
             </div>
@@ -35,10 +51,7 @@ export const AboutUs = () => {
             transition={{ duration: 1 }}
           >
             <div className="about-frame">
-              <div
-                className="about-image h-96 bg-cover bg-center rounded-lg shadow-lg"
-                
-              ></div>
+              <div className="about-image h-96 bg-cover bg-center rounded-lg shadow-lg"></div>
             </div>
           </motion.div>
         </div>
@@ -46,4 +59,3 @@ export const AboutUs = () => {
     </section>
   );
 };
-

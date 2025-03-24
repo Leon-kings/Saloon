@@ -154,7 +154,7 @@ export default function Navbar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} className='rounded-2xl'>
       <AppBar position="static">
         <Toolbar>
           <IconButton

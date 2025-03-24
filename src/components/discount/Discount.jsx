@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export const Discount = () => {
   return (
     <section
-      className="w-full py-20 bg-cover bg-center relative"
+      className="w-full rounded-2xl mb-6 py-20 bg-cover bg-center relative"
       id="discount"
     >
       {/* Overlay for better readability */}

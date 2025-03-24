@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <>
       <section
-        className="w-full h-screen bg-cover bg-center flex items-center justify-center"
+        className="w-full h-screen mt-4 mb-4 rounded-2xl bg-cover bg-center flex items-center justify-center"
         id="main-banner"
       >
         <div className="w-full px-4">
