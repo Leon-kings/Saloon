@@ -28,7 +28,7 @@ export default function App() {
             <Route element={<AboutUs />} path="/A-673" />
             <Route element={<Services />} path="/S-849" />
             <Route element={<Home />} path="/" />
-            {" "}
+            <Route element={<ServicesCategory />} path="/C-926" />{" "}
           </Routes>
           <Footer />
         </BrowserRouter>

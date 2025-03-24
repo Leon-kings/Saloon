@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/S-849' },
     { name: 'About', path: '/A-673' },
-    { name: 'Blog', path: '/#' },
+    { name: 'Category', path: '/C-926' },
   ];
 
   const mobileMenuVariants = {
