@@ -97,16 +97,17 @@ const Navbar = () => {
                 <Box component="nav">
                   <Box component="ul" sx={{ display: "flex", gap: 4 }}>
                     {navItems.map((item) => (
-                      <ListItem key={item.name} NavLink={item.path}>
+                      <Link key={item.name} to={item.path}>
+                      <button className="button text-black dark:text-gray-600">
                         {item.name}
-                      </ListItem>
+                      </button></Link>
                     ))}
                   </Box>
                 </Box>
 
                 <Box sx={{ display: "flex", gap: 2, ml: 4 }}>
                   <Link to={"/S-906"} className="text-white">
-                    <Button>Message Us</Button>
+                    <button>Message Us</button>
                   </Link>
                 </Box>
               </Box>
@@ -152,9 +153,10 @@ const Navbar = () => {
                       sx={{ display: "flex", flexDirection: "column", gap: 1 }}
                     >
                       {navItems.map((item) => (
-                        <ListItem key={item.name} NavLink={item.path} mobile>
+                        <Link key={item.name} to={item.path}>
+                        <button className="button text-black dark:text-gray-600">
                           {item.name}
-                        </ListItem>
+                        </button></Link>
                       ))}
                     </Box>
 
