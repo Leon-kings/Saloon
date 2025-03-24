@@ -9,6 +9,7 @@ import Testimony from "../testimony/Testimony";
 import Gallery from "../../components/gallery/Gallery";
 import Brands from "../../components/brands/Brands";
 import WorkingHrs from "../../components/hrs/WorkingHrs";
+import SignIn from "../contact/SignIn";
 
 export default function Home() {
   return (
@@ -43,6 +44,9 @@ export default function Home() {
         </div>
         <div className="w-full">
           <WorkingHrs />
+        </div>
+        <div className="w-full">
+          <SignIn />
         </div>
       </div>
     </>

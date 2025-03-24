@@ -32,3 +32,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.signin{
+  background-image: url('/src/assets/images/others/about.jpg');
+  
+}
